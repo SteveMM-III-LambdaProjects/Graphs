@@ -82,22 +82,6 @@ class Graph:
 
         This should be done using recursion.
         """
-
-        ###  Works but backwards
-
-        """ visited = set()
-
-        def recur( vertex ):
-            if vertex not in visited:
-                visited.add( vertex )
-
-                for neighbor in self.get_neighbors( vertex ):
-                    recur( neighbor )
-
-                print( vertex )
-        
-        recur( starting_vertex ) """
-        
         print( starting_vertex )
         
         visited.add( starting_vertex )
@@ -105,7 +89,7 @@ class Graph:
         for neighbor in self.get_neighbors( starting_vertex ):
             if neighbor not in visited:
                 visited.add( neighbor )
-                
+
                 self.dft_recursive( neighbor, visited )
 
     def bfs(self, starting_vertex, destination_vertex):
